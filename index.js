@@ -5,7 +5,7 @@ const URL = require("./models/url");
 const path = require("path");
 const { connectMongoDb } = require("./connection");
 const { restrictToLoggedinUserOnly,checkAuth} = require("./middleware/auth");
-
+//importing routes file
 const urlRoute = require("./routes/url");
 const staticRouter = require("./routes/staticRouter");
 const userRoute = require("./routes/user");
@@ -55,4 +55,5 @@ app.get("/url/:id", async (req, res) => {
 });
 
 app.listen(PORT, ()=> console.log(`server started at PORT:${PORT}`));
+
  
